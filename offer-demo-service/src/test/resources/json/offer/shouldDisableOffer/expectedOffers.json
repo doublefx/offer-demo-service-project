@@ -1,0 +1,9 @@
+[
+	{
+		"id": 1,
+		"description": "1st offer",
+		"price": 10.10,
+		"expiryDate": "2039-06-16T06:44:17Z",
+		"disabled": false
+	}
+]

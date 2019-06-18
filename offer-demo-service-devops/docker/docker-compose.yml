@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  mariadb:
+    ports:
+      - '3306:3306'
+    image: mariadb
+    environment:
+      - "MYSQL_ROOT_PASSWORD=password"
+
+  offer-demo-service:
+    ports:
+      - '8080:8080'
+      - '8081:8081'
+      - '5005:5005'
+    image: ${docker.image.prefix}/offer-demo-service:${project.version}
+    build: ./
+    environment:
+      - 'OFFER_DB_HOST=mariadb'
+      - 'OFFER_DB_PORT=3306'
+      - 'SPRING_DATASOURCE_USERNAME=root'
+      - 'SPRING_DATASOURCE_PASSWORD=password'
+    deploy:
+      replicas: 2
