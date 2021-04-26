@@ -23,7 +23,7 @@
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
         <h2.version>1.4.197</h2.version>
         <wiremock.version>2.18.0</wiremock.version>
-        <commons.version>2.6</commons.version>
+        <commons.version>2.7</commons.version>
         <embedded-mariadb.version>1.23</embedded-mariadb.version>
         <lombok.version>1.18.10</lombok.version>
     </properties>
